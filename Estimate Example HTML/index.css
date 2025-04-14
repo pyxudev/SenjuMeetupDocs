@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "游ゴシック Medium", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+#header-container {
+    margin: 0 auto;
+    width: 694px;
+}
+
+header {
+    background-color: #214555;
+}
+
+#head-inner {
+    padding: 25px 0;
+}
+
+h1 {
+    font-size: 26px;
+    font-weight: bold;
+    padding: 10px 0 0 0;
+    margin: 0;
+    color: #f3e6d2;
+}
+
+.description {
+    line-height: 1.2;
+    color: #f3f2eb;
+    margin: 0.5em 0 1em 0;
+}
+
+h2 {
+    font-size: 22px;
+    margin: 0;
+    padding: 4px 0;
+    border-bottom: 1px solid #999;
+}
+
+#content-wrapper {
+    margin: 0 auto;
+    width: 694px;
+}
+
+main {
+    color: #333;
+    margin: 10% 0;
+}
+
+table {
+    table-layout: fixed;
+}
+
+.thitem {
+    width: 200px;
+}
+
+.thprice {
+    width: 220px;
+}
+
+.itemName {
+    width: 80%;
+    margin: 0 10px;
+}
+
+.itemCount {
+    margin: 0 10px;
+    text-align: center;
+}
+.tdprice {
+    text-align: right;
+}
+.price {
+    margin: 0 10px;
+}
+
+.delivery {
+    width: 400px;
+    height: 100px;
+}
+
+hr {
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: #ccc;
+    height: 1px;
+}
+
+a {
+    font-weight: normal;
+}
+
+footer {
+    font-size: 15px;
+    height: 100px;
+    clear: both;
+    text-align: center;
+}
+
+blockquote {
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 10px;
+}
+
+@media screen and (max-width: 767px) {
+    #header-container {
+        margin: 0;
+        width: 100%;
+    }
+
+    #head-inner {
+        padding: 25px 10px;
+        background-color: #214555;
+    }
+
+    #content-wrapper {
+        margin: 0;
+        width: 100%;
+    }
+
+    main {
+        width: 100%;
+        color: #333;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    h4 {
+        font-size: 14px;
+    }
+}

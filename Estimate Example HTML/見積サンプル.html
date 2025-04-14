@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>見積サンプル</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta name="keywords" content="見積, サンプル">
+    <meta name="description" content="見積サンプル">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div id="outer">
+        <header>
+            <div id="header-container">
+                <div id="head-inner">
+                    <h1>簡易見積</h1>
+                    <p class="description">あくまでも簡易見積もりです</p>
+                </div>
+            </div>
+        </header>
+        <div id="content-wrapper">
+            <main>
+                <div>
+                    商品と個数を入力してください。
+                </div>
+                <div id="estimate">
+                    <table border="1">
+                        <tr>
+                            <td colspan="3" style="text-align: center;"><h2>見積書</h2></td>
+                            
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="text-decoration: underline;"><input type="text" autocomplete="name" style="text-align: right; text-decoration: underline;">　様</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">見積No.<div id="estnum"></div></td>
+                            <td style="text-decoration: underline;">見積日: <div id="estdate"></div></td>
+                        </tr>
+                        <tr>
+                            <th class="thitem">項目</th>
+                            <th>個数</th>
+                            <th class="thprice">金額</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select class="itemName">
+                                    <option value="prod1">商品A</option>
+                                    <option value="prod2">商品B</option>
+                                    <option value="prod3">商品C</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="number" class="itemCount" value="1">
+                            </td>
+                            <td class="tdprice"><div class="price"></div>円</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select class="itemName">
+                                    <option value="prod1">商品A</option>
+                                    <option value="prod2">商品B</option>
+                                    <option value="prod3">商品C</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="number" class="itemCount" value="1">
+                            </td>
+                            <td class="tdprice"><div class="price"></div>円</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select class="itemName">
+                                    <option value="prod1">商品A</option>
+                                    <option value="prod2">商品B</option>
+                                    <option value="prod3">商品C</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="number" class="itemCount" value="1">
+                            </td>
+                            <td class="tdprice"><div class="price"></div>円</td>
+                        </tr>
+                        <tr>
+                            <td>運送費</td>
+                            <td style="text-align: center;">1</td>
+                            <td class="tdprice"><div class="delifee"></div>円</td>
+                        </tr>
+                        <tr>
+                            <td>消費税</td>
+                            <td style="text-align: center;">10%</td>
+                            <td class="tdprice"><div class="tax"></div>円</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">合計</td>
+                            <td class="tdprice"><div class="total"></div>円</td>
+                        </tr>
+                        <tr>
+                            <td>納品先</td>
+                            <td colspan="2">郵便番号：〒<input type="text" autocomplete="postal-code"><br>住所:<br><textarea type="text" class="delivery"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>納品元</td>
+                            <td colspan="2">〒100-8111<br>東京都千代田区千代田１−１<br>Example.inc</td>
+                        </tr>
+                    </table>
+                </div>
+                <button id="printout" onclick="dlpdf()">PDF保存</button>
+                <p>お支払いは現金のみとなります。</p>
+                <hr>
+                <h2>お問い合わせ</h2>
+                <p>お問い合わせは以下のフォームからお願いします。</p>
+            </main>
+        </div>
+        <footer>2025 Copyright ©Example.inc</footer>
+    </div>
+</body>
+</html>
