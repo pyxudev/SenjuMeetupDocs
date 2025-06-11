@@ -19,7 +19,7 @@
 - ブランチ（Branch）
   - 作業の分岐。新機能や修正を本線（main）から切り離して行う。
 - マージ（Merge）
-  - 各ブランチでの作業を一つのブランチに統合する操作。
+  - 他ブランチでの作業を一つのブランチ（main）に統合する操作。
 
 ## GitHub の基本操作
 - アカウント作成
@@ -53,7 +53,7 @@ $ ssh-keygen -t ed25519 -C "your_email@example.com"
 
 2. SSH キーの追加
 
-[ settings ] → [ SSH and GCP keys ] → [ New SSH Key ] をクリックし、Title を入力し、Key に 1. で生成した .pub ファイルの中身をペーストし、[ Add SSH Key ] をクリック
+[ settings ] → [ SSH and GCP keys ] → [ New SSH Key ] をクリックし、Title を入力し、Key に 1. で作成した .pub ファイルの中身をペーストし、[ Add SSH Key ] をクリック
 
 3. config ファイルの作成
 
