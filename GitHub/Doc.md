@@ -54,6 +54,7 @@ $ ssh-keygen -t ed25519 -C "your_email@example.com"
 2. SSH キーの追加
 
 [ settings ] → [ SSH and GCP keys ] → [ New SSH Key ] をクリックし、Title を入力し、Key に 1. で作成した .pub ファイルの中身をペーストし、[ Add SSH Key ] をクリック
+![image](https://github.com/user-attachments/assets/bca002c0-6f8b-42b8-883e-ff82f0893462)
 
 3. config ファイルの作成
 
