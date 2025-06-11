@@ -1,4 +1,4 @@
-# 
+# GitHub　ハンズオン
 
 ## ゴール
 - GitHub の基本操作を理解する
@@ -33,14 +33,30 @@
 
 ## Git のローカル操作と GitHub との連携 CLI を使ってみよう
 前提：ssh-agent が動いていることを確認し、GitHub に登録し、[git](https://git-scm.com/downloads) をインストールする
+- Windows: https://git-scm.com/downloads
+- Linux： 
+```
+sudo apt install git
+sudo yum install git
+sudo dnf install git
+```
+いずれかを使用
+
 1. SSH キーの生成
-C:\Users\your_usrname\\.ssh にて
+
+Windows: C:\Users\your_usrname\.ssh<br>
+Linux: home/.ssh<br>
+にて
 ```
 $ ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
+
 2. SSH キーの追加
+
 [ settings ] → [ SSH and GCP keys ] → [ New SSH Key ] をクリックし、Title を入力し、Key に 1. で生成した .pub ファイルの中身をペーストし、[ Add SSH Key ] をクリック
+
 3. config ファイルの作成
+
 上記 1. の .ssh ディレクトリにて config ファイルを作成し以下を入力
 ```
 Host github
@@ -59,10 +75,13 @@ Hi your_name! You've successfully authenticated, but GitHub does not provide she
 
 ## レポジトリを作成してみよう！
 1. [Repositories](https://github.com/your_name?tab=repositories) ページにて、[ New ] ボタンをクリックし、以下の項目を入力
+
 - Repository name
 - Description
 公開レポジトリかプライベートレポジトリを選択し、README ファイルを追加するか選択して [ Create repository ] をクリック
+
 2. コードを作成したディレクトリにて以下を実行
+
 ```
 git init
 git git remote add git@github.com:your_name/your_repo.git
@@ -73,7 +92,9 @@ git push origin main
 ```
 
 ## レポジトリをクローンしてみよう！
+
 1. レポジトリのクローン
+
 ```
 git config --global user.name "your_name"
 git config --global user.email "your_email"
@@ -87,12 +108,15 @@ git clone git@github.com:pyxudev/study.git
 Pull request は developer → UAT → QA → Prod の順番で Mergeされていく
 
 1. コードのバージョン更新
-README.md の中身を編集してプッシュする
+
+`README.md` の中身を編集してプッシュする
 ```
 git branch -m dev
 git add .
 git commit -m "Modified README.md"
 git push origin dev
 ```
+
 2. Pull request を作成
-[Pull requests](https://github.com/pyxudev/study/pulls) にて [ New pull request ] をクリックし、dev を選択し、[ Create pull request ] をクリックし、画面遷移後再度 [ Create pull request ] をクリック
+
+[Pull requests](https://github.com/pyxudev/study/pulls) にて [ New pull request ] をクリックし、`dev` を選択し、[ Create pull request ] をクリックし、画面遷移後再度 [ Create pull request ] をクリック
