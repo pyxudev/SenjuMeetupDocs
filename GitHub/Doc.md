@@ -51,12 +51,7 @@ Linux: home/.ssh<br>
 $ ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
 
-2. SSH キーの追加
-
-[ settings ] → [ SSH and GCP keys ] → [ New SSH Key ] をクリックし、Title を入力し、Key に 1. で作成した .pub ファイルの中身をペーストし、[ Add SSH Key ] をクリック
-![image](https://github.com/user-attachments/assets/bca002c0-6f8b-42b8-883e-ff82f0893462)
-
-3. config ファイルの作成
+2. config ファイルの作成
 
 上記 1. の .ssh ディレクトリにて config ファイルを作成し以下を入力
 ```
@@ -65,7 +60,21 @@ Host github
   IdentityFile ~/.ssh/your_keyname
   User git
 ```
-4. 接続確認
+
+3.SSH キーの追加
+
+[ settings ] → [ SSH and GCP keys ] → [ New SSH Key ] をクリックし、Title を入力し、Key に 1. で作成した .pub ファイルの中身をペーストし、[ Add SSH Key ] をクリック
+![image](https://github.com/user-attachments/assets/bca002c0-6f8b-42b8-883e-ff82f0893462)
+
+4. git config を作成
+
+```
+git config --global user.name "your_name"
+git config --global user.email "your_email"
+```
+
+5. 接続確認
+
 ```
 $ ssh -T git@github.com
 ```
@@ -73,6 +82,39 @@ $ ssh -T git@github.com
 ```
 Hi your_name! You've successfully authenticated, but GitHub does not provide shell access.
 ```
+
+## レポジトリをクローンしてみよう！
+```
+git clone https://github.com/pyxudev/study.git
+```
+- ディレクトリ構造を確認<br>
+![image](https://github.com/user-attachments/assets/761606e4-2538-4035-a41f-ea417ffb44b7)
+
+## レポジトリをクローンしてみよう！
+
+1. レポジトリのクローン
+
+```
+git clone git@github.com:pyxudev/study.git
+```
+`README.md` を含むフォルダが作成されたら成功
+
+2. コードのバージョン更新
+
+全体の流れ：ローカル編集 → Stage にコミット → Push する → Pull Request 作成 → コードレビュー → Merge<br>
+Pull request は developer → UAT → QA → Prod の順番で Mergeされていく
+
+`README.md` の中身を編集してプッシュする
+```
+git branch -m dev
+git add .
+git commit -m "Modified README.md"
+git push origin dev
+```
+
+3. Pull request を作成
+
+[Pull requests](https://github.com/pyxudev/study/pulls) にて [ New pull request ] をクリックし、`dev` を選択し、[ Create pull request ] をクリックし、画面遷移後再度 [ Create pull request ] をクリック
 
 ## レポジトリを作成してみよう！
 1. [Repositories](https://github.com/your_name?tab=repositories) ページにて、[ New ] ボタンをクリックし、以下の項目を入力
@@ -91,33 +133,3 @@ git add .
 git commit -m "First commit"
 git push origin main
 ```
-
-## レポジトリをクローンしてみよう！
-
-1. レポジトリのクローン
-
-```
-git config --global user.name "your_name"
-git config --global user.email "your_email"
-
-git clone git@github.com:pyxudev/study.git
-```
-`README.md` を含むフォルダが作成されたら成功
-
-## Git のバージョン管理
-全体の流れ：ローカル編集 → Stage にコミット → Push する → Pull Request 作成 → コードレビュー → Merge<br>
-Pull request は developer → UAT → QA → Prod の順番で Mergeされていく
-
-1. コードのバージョン更新
-
-`README.md` の中身を編集してプッシュする
-```
-git branch -m dev
-git add .
-git commit -m "Modified README.md"
-git push origin dev
-```
-
-2. Pull request を作成
-
-[Pull requests](https://github.com/pyxudev/study/pulls) にて [ New pull request ] をクリックし、`dev` を選択し、[ Create pull request ] をクリックし、画面遷移後再度 [ Create pull request ] をクリック
