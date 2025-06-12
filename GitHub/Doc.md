@@ -111,6 +111,19 @@ git add .
 git commit -m "Modified README.md"
 git push origin dev
 ```
+### Git の操作
+
+- `git branch`: ブランチ一覧を表示
+- `git branch branch_name`: ブランチを作成
+- `git branch -d branch_name`: ブランチを削除
+
+- `git checkout branch_name`: ブランチの切り替え、一時的にそのブランチにいる
+- `git checkout -b`: 新規にブランチを作成して切り替える
+- `git checkout other_branch -- file_name`: ほかブランチからファイルを復元
+
+- `git switch branch_name`: 既存ブランチに切り替え
+- `git switch -c branch_name`: 新たにブランチを作成して切り替えをする
+- `git switch -c branch_name origin branch_name`: リモートブランチをローカルに持ってくる
 
 3. Pull request を作成
 
