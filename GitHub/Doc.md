@@ -140,6 +140,7 @@ git push origin dev
 - `git status`: 現在のステージング状況を確認
 - `git diff`: ステージング前の変更を確認
 - `git diff --staged`: ステージング済みの変更を確認
+
 ![alt text](image.png)
 
 #### コミット
@@ -152,6 +153,7 @@ git push origin dev
 - リモートブランチ: GitHub 存在するブランチ
 - `git push remote_name branch_name`: ローカルリポジトリの変更をリモートリポジトリに反映させる
 - `origin`：リモートリポジトリの名前（通常はデフォルトで origin）
+- `git push -u origin branch_name`: 追跡ブランチ、以降 `git push` だけで済むようになる
 
 3. Pull request を作成
 
