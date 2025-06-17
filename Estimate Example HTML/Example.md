@@ -29,6 +29,6 @@
 | Provider information                | textarea-String   | Text with return |
 | Reciver Post code                   | Postcode-Int      | 000-0000         |
 | Reciver address                     | Textarea-String   | Textarea         |
-| Delivery solution(better to have)   | option-String     | Pulldown         |
+| Delivery solution(nice to have)   | option-String     | Pulldown         |
 | Estimate button(could be auto)      | button            | Onclick          |
-| PDF download button(better to have) | button            | Onclick          |
+| PDF download button(nice to have) | button            | Onclick          |
