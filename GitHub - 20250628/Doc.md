@@ -190,3 +190,22 @@ git fetch true_origin
 git checkout main
 git pull true_origin main
 ```
+
+## そのほかの便利機能など
+- 最後のコミットからの修正を退避される
+  - `git status`
+  - `git stash`
+- 修正取り消し
+  - `git restore test.txt` / `git checkout test.txt`
+    - git checkout は使わない
+- リモートを登録し間違えたとき
+  - `git remote remove <repo_name>`
+- どの行が誰によって修正されたかを確認する
+  - `git blame <filename>`
+- git bisect start <bad_branch> <current_good_commit>
+  - `git bisect good` 問題ないとき
+  - `git bisect bad` バグが入っている最初のコミットを特定
+- Issue 機能
+- GitHub pages で静的サイトを公開
+- GitHub Actions で PR を自動化
+- GitHub Copilot で学習を加速させよう
