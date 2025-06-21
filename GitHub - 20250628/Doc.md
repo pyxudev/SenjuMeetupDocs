@@ -1,5 +1,5 @@
 # GitHub　ハンズオン
-PowerPoint: 
+PowerPoint: https://drive.google.com/drive/folders/1TiKKIUH7VcA-JaPUP3rcP1R9GLzjDidq?usp=sharing
 
 ## ゴール
 - GitHub の基本操作を理解する
