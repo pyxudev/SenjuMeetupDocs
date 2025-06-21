@@ -1,4 +1,5 @@
 # GitHub　ハンズオン
+PowerPoint: 
 
 ## ゴール
 - GitHub の基本操作を理解する
@@ -88,36 +89,6 @@ $ ssh -T git@github.com
 ```
 Hi your_name! You've successfully authenticated, but GitHub does not provide shell access.
 ```
-
-## レポジトリをクローンしてみよう！
-```
-git clone https://github.com/pyxudev/study.git
-```
-- ディレクトリ構造を確認<br>
-![image](https://github.com/user-attachments/assets/761606e4-2538-4035-a41f-ea417ffb44b7)
-
-## レポジトリをクローンしてみよう！
-
-1. レポジトリのクローン
-
-```
-git clone git@github.com:pyxudev/study.git
-```
-`README.md` を含むフォルダが作成されたら成功
-
-2. コードのバージョン更新
-
-全体の流れ：ローカル編集 → Stage にコミット → Push する → Pull Request 作成 → コードレビュー → Merge<br>
-Pull request は developer → UAT → QA → Prod の順番で Mergeされていく
-
-`README.md` の中身を編集してプッシュする
-```
-git branch -m dev
-git add .
-git commit -m "Modified README.md"
-git push origin dev
-```
-
 ### Git コマンド
 #### ブランチ操作
 - `git branch`: ブランチ一覧を表示
@@ -161,9 +132,6 @@ git push origin dev
 - `origin`：リモートリポジトリの名前（通常はデフォルトで origin）
 - `git push -u origin branch_name`: 追跡ブランチ、以降 `git push` だけで済むようになる
 
-3. Pull request を作成
-
-[Pull requests](https://github.com/pyxudev/study/pulls) にて [ New pull request ] をクリックし、`dev` を選択し、[ Create pull request ] をクリックし、画面遷移後再度 [ Create pull request ] をクリック
 
 ## レポジトリを作成してみよう！
 1. [Repositories](https://github.com/your_name?tab=repositories) ページにて、[ New ] ボタンをクリックし、以下の項目を入力
@@ -172,13 +140,53 @@ git push origin dev
 - Description
 公開レポジトリかプライベートレポジトリを選択し、README ファイルを追加するか選択して [ Create repository ] をクリック
 
-2. コードを作成したディレクトリにて以下を実行
-
+2. フォルダを作成して実行
 ```
+echo “Hello World" >> README.md
 git init
-git git remote add git@github.com:your_name/your_repo.git
+git add README.md
+git commit -m "first commit"
 git branch -M main
+git remote add origin git@github.com:<name>/<project>.git
+git push -u origin main
+```
+
+## レポジトリをクローンしてみよう！
+Fork: https://github.com/pyxudev/study
+```
+git clone git@github.com/<yourname>/study.git
+```
+`README.md` を含むフォルダが作成されたら成功
+
+## コードのバージョン更新
+
+全体の流れ：ローカル編集 → Stage にコミット → Push する → Pull Request 作成 → コードレビュー → Merge<br>
+Pull request は [fork 先 dev] → [dev] → [main] の順番で Mergeされていく
+
+`README.md` の中身を編集してプッシュする
+```
+git branch -m dev
 git add .
-git commit -m "First commit"
-git push origin main
+git commit -m "<comment>"
+git push origin dev
+```
+
+直接 main ブランチに push する場合は独自のブランチを作成
+```
+git branch -m <your_branch>
+git add .
+git commit -m "<comment>"
+git push origin <your_branch>
+```
+
+## Pull request を作成
+
+[ Create pull request ] をクリックし、画面遷移後再度 [ Create pull request ] をクリック
+
+## 最新の更新を同期する
+```
+git remote add true_origin https://github.com/pyxudev/study
+git fetch true_origin
+git checkout main
+git pull true_origin main
 ```
