@@ -1,4 +1,4 @@
-# GitHub　ハンズオン
+# GitHub ハンズオン
 PowerPoint: https://drive.google.com/drive/folders/1TiKKIUH7VcA-JaPUP3rcP1R9GLzjDidq?usp=sharing
 
 ## ゴール
